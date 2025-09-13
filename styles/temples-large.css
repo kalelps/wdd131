@@ -1,0 +1,28 @@
+/* Larger screen styles */
+@media (min-width: 700px) {
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    position: static;
+    background: none;
+  }
+
+  .navigation a {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .navigation a:hover {
+    background: none;
+    color: #2980b9;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
