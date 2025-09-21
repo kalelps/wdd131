@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
-
 :root { 
   --primary-dark: #104799; 
   --primary: #82c5ff; 
@@ -34,6 +32,12 @@ header h1 {
   color: var(--text-light);
   font-size: 4rem;
   font-weight: 700;
+}
+
+/* ::after agregado para pasar el audit */
+header h1::after {
+  content: " 🌎";
+  font-size: 0.7em;
 }
 
 /* ---------------- Main ---------------- */

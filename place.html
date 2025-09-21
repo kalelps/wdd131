@@ -6,25 +6,29 @@
   <title>WDD 131 – Country Page – Gabriel Perez Sanchez</title>
   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Gabriel Perez Sanchez. Country information about Peru.">
   <meta name="author" content="Gabriel Kalel Perez Sanchez">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/places.js" defer></script>
 </head>
 <body>
-  <!-- Encabezado -->
+
   <header>
-    <h1>Perú</h1>
+    <h1>Perú - Country Page</h1>
   </header>
 
-  <!-- Contenido principal -->
   <main>
     <section class="hero">
-      <!-- Imagen de fondo visible SOLO en móvil -->
-      <img src="images/lima-background.webp" alt="Lima background" class="hero-img">
 
-      <!-- Caja de datos -->
+      <img 
+        src="images/lima-background.webp" 
+        srcset="images/lima-background-small.webp 480w, images/lima-background.webp 1024w" 
+        sizes="(max-width: 768px) 100vw, 1024px"
+        alt="Lima background" 
+        class="hero-img">
+
       <div class="info-box data-box">
         <h2>
-          <img src="images/data-icon.svg" alt="Peru Flag" class="icon"> Data
+          <img src="images/data-icon.svg" alt="Data Icon" class="icon"> Data
         </h2>
         <ul>
           <li><strong>Area:</strong> 1,285,216 sq km</li>
@@ -38,17 +42,15 @@
         </ul>
       </div>
 
-      <!-- Caja de clima -->
-      <div class="info-box weather-box">
+
+             <div class="info-box weather-box">
         <h2>
-          <img src="images/weather-icon.svg" alt="Weather icon" class="icon desktop-only"> Weather
+          <img src="images/weather-icon.svg" alt="Weather icon" class="icon"> Weather
         </h2>
 
-        <!-- Icono alternativo SOLO para móvil -->
         <div class="weather-icon-mobile-wrapper">
           <img src="images/weather-icon-mobile.svg" alt="Weather icon mobile" class="weather-icon-mobile">
         </div>
-
         <ul>
           <li><strong>Temperature:</strong> 18°C</li>
           <li><strong>Conditions:</strong> Partly Cloudy</li>
@@ -59,7 +61,6 @@
     </section>
   </main>
 
-  <!-- Pie de página -->
   <footer>
     <p>&copy;2024 Gabriel Kalel Perez Sanchez Peru</p>
     <p id="lastModified">Last Modification: 02/08/2024 22:47:47</p>
