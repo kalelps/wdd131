@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Gabriel Perez Sanchez</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Gabriel Perez Sanchez. A descriptive page about myself, some things about me, what I like, what I don't like.">
+  <meta name="author" content="Gabriel Kalel Perez Sanchez">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals - <span class="name-highlight">Gabriel Perez Sanchez</span></span>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng" target="_blank">Favorite Scripture</a></li>
+        <li><a href="">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Me Card -->
+    <section class="card about-me">
+      <h2>About Me</h2>
+      <div class="card-content">
+        <div class="about-grid">
+          <!-- Texto -->
+          <div class="about-text">
+            <p>
+              My name is Gabriel and I live in Lima, Peru. I enjoy learning about web development 
+              and exploring new technologies. My goals in this class are to strengthen my coding 
+              skills and build creative, useful projects.
+            </p>
+
+            <h3>Lima, Peru</h3>
+            <div class="country-info">
+              <figure>
+                <img src="images/peru-bandera.webp" alt="Official Flag of Peru" width="150" height="100">
+                <figcaption><em>Official Flag of Peru</em></figcaption>
+              </figure>
+              <p>
+                Peru is a sovereign country located in western South America. It borders Ecuador 
+                and Colombia to the north; Brazil and Bolivia to the east; Chile to the south; and 
+                the Pacific Ocean to the west. Its territory is composed of three regions: the coast, 
+                the mountains, and the jungle.
+              </p>
+            </div>
+          </div>
+
+          <!-- Foto de perfil -->
+          <div class="about-photo">
+            <img src="images/profile-photo.webp" alt="Photo of Gabriel Perez Sanchez" width="250" height="250">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Web Resources Card -->
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <div class="card-content">
+        <ul class="resource-list">
+          <li><a href="https://iframely.com/" target="_blank">iframely</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+          <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+          <li><a href="https://pixlr.com/es/express/" target="_blank">Pixlr</a></li>
+          <li><a href="https://cssgradient.io/" target="_blank">CSS Gradient</a></li>
+          <li><a href="https://coolors.co/" target="_blank">Coolors</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Gabriel Kalel Perez Sanchez | Lima, Peru</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
