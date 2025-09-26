@@ -34,7 +34,7 @@ header h1 {
   font-weight: 700;
 }
 
-/* ::after agregado para desktop solamente */
+/* Pseudo-element emoticon (desktop only) */
 header h1::after {
   content: " 🌎";
   font-size: 0.7em;
@@ -42,7 +42,7 @@ header h1::after {
 
 @media (max-width: 768px) {
   header h1::after {
-    content: ""; /* ocultar emoticono en móvil */
+    content: ""; /* hide on mobile */
   }
 }
 
@@ -67,7 +67,7 @@ main {
   height: auto;
 }
 
-/* Cajas informativas */
+/* Info boxes */
 .info-box {
   position: absolute;
   background: var(--light);
@@ -77,7 +77,6 @@ main {
   font-size: 0.9rem;
 }
 
-/* Iconos en los títulos */
 .info-box h2 {
   display: flex;
   align-items: center;
@@ -103,7 +102,7 @@ main {
   margin: 0.3rem 0;
 }
 
-/* Posiciones desktop */
+/* Desktop positions */
 .data-box {
   top: 20%;
   left: 5%;
@@ -116,20 +115,20 @@ main {
   width: 220px;
 }
 
-/* Icono móvil oculto en desktop */
+/* Mobile SVG only */
 .weather-icon-mobile-wrapper {
   display: none;
 }
 
-/* ---------------- Responsive Design ---------------- */
+/* ---------------- Responsive ---------------- */
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    background: none; /* quitamos fondo en móvil */
+    background: none;
   }
 
   .hero-img {
-    display: block; /* mostramos la imagen en móvil */
+    display: block;
   }
 
   .info-box {
@@ -150,12 +149,10 @@ main {
     padding: 0;
   }
 
-  /* Ocultar icono desktop en móvil */
   .info-box h2 .icon {
     display: none;
   }
 
-  /* Mostrar icono móvil debajo del título */
   .weather-icon-mobile-wrapper {
     display: flex;
     justify-content: center;
