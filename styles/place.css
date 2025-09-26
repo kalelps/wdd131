@@ -21,7 +21,6 @@ body {
   min-height: 100vh;
 }
 
-/* ---------------- Header ---------------- */
 header {
   background-color: var(--primary-dark);
   text-align: center;
@@ -34,7 +33,6 @@ header h1 {
   font-weight: 700;
 }
 
-/* Pseudo-element emoticon (desktop only) */
 header h1::after {
   content: " 🌎";
   font-size: 0.7em;
@@ -42,11 +40,10 @@ header h1::after {
 
 @media (max-width: 768px) {
   header h1::after {
-    content: ""; /* hide on mobile */
+    content: "";
   }
 }
 
-/* ---------------- Main ---------------- */
 main {
   flex: 1;
 }
@@ -67,7 +64,6 @@ main {
   height: auto;
 }
 
-/* Info boxes */
 .info-box {
   position: absolute;
   background: var(--light);
@@ -102,7 +98,6 @@ main {
   margin: 0.3rem 0;
 }
 
-/* Desktop positions */
 .data-box {
   top: 20%;
   left: 5%;
@@ -115,7 +110,7 @@ main {
   width: 220px;
 }
 
-/* Mobile SVG only */
+
 .weather-icon-mobile-wrapper {
   display: none;
 }
@@ -174,6 +169,7 @@ main {
 }
 
 /* ---------------- Footer ---------------- */
+
 footer {
   background: var(--primary-dark);
   color: var(--text-light);
