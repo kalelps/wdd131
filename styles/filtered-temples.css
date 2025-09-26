@@ -8,8 +8,7 @@
   --heading-font: "Roboto", sans-serif; 
 }
 
-/* General */
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +21,8 @@ body {
   background: var(--text-light);
   color: var(--text-dark);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -29,8 +30,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-  border-bottom: 2px solid var(--text-light)
+  padding: 1rem 1rem;
+  border-bottom: 2px solid var(--text-light);
 }
 
 header h1 {
@@ -45,10 +46,10 @@ header h1 {
   border: none;
   cursor: pointer;
   display: block;
+  color: var(--text-light);
 }
 
 .navigation {
-
   display: none;
   flex-direction: column;
   background: var(--primary-dark);
@@ -59,11 +60,11 @@ header h1 {
   border-radius: 8px;
 }
 
-
 .navigation a {
   color: var(--text-light);
   text-decoration: none;
   padding: 0.5rem;
+  font-weight: bold;
 }
 
 .navigation a:hover {
@@ -76,19 +77,21 @@ main {
   max-width: 1000px;
   margin: 1rem auto;
   text-align: center;
+  flex-grow: 1;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  padding: 1rem;
 }
 
 figure {
   background: var(--text-light);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px var(--text-dark)
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 figure img {
@@ -99,22 +102,19 @@ figure img {
 
 figcaption {
   padding: 0.5rem;
-  background: var(--text-light);
+  background: var(--light);
   font-weight: bold;
+  color: var(--text-dark);
 }
 
 /* Footer */
 footer {
-  background: #104799;
+  background: var(--primary-dark);
   color: var(--text-light);
   text-align: center;
   padding: 1rem;
   font-size: 0.85rem;
   margin-top: auto;
-}
-
-footer p {
-  margin: 0.3rem 0;
 }
 
 footer span {

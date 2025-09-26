@@ -53,14 +53,21 @@ const temples = [
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 41010,
-    imageUrl: "images/italia-roma-temple.webp"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
   },
   {
     templeName: "La Paz Bolivia Temple",
     location: "La Paz, Bolivia",
     dedicated: "2024, June, 16",
     area: 33000,
-    imageUrl: "images/colombia-bogota-temple.webp"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/la-paz-bolivia-temple/la-paz-bolivia-temple-44435-main.jpg"
+  },
+  {
+    templeName: "Salt Lake Temple",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, April, 6",
+    area: 253015,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
   }
 ];
 
@@ -74,6 +81,7 @@ function displayTemples(templesArray) {
     const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
+    img.loading = "lazy";
 
     const caption = document.createElement("figcaption");
     caption.innerHTML = `
@@ -89,12 +97,13 @@ function displayTemples(templesArray) {
   });
 }
 
+
 displayTemples(temples);
 
-// ==========================
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
+
 
 const menuButton = document.getElementById("menu");
 const nav = document.querySelector(".navigation");
@@ -102,4 +111,27 @@ const nav = document.querySelector(".navigation");
 menuButton.addEventListener("click", () => {
   nav.style.display = nav.style.display === "flex" ? "none" : "flex";
   menuButton.textContent = menuButton.textContent === "☰" ? "✖" : "☰";
+});
+
+document.querySelectorAll(".navigation a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const filter = e.target.textContent;
+
+    let filtered = temples;
+
+    if (filter === "Old") {
+      filtered = temples.filter(t => parseInt(t.dedicated) < 1900);
+    } else if (filter === "New") {
+      filtered = temples.filter(t => parseInt(t.dedicated) > 2000);
+    } else if (filter === "Large") {
+      filtered = temples.filter(t => t.area > 90000);
+    } else if (filter === "Small") {
+      filtered = temples.filter(t => t.area < 10000);
+    } else {
+      filtered = temples; // Home
+    }
+
+    displayTemples(filtered);
+  });
 });

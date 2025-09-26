@@ -18,7 +18,7 @@
 
   .navigation a:hover {
     background: none;
-    color: #2980b9;
+    color: var(--highlight);
   }
 
   .gallery {
