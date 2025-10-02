@@ -43,6 +43,9 @@ main {
   padding: 2rem 1rem;
 }
 
+/* ---------------------------
+   Form Styles
+---------------------------- */
 .review-form {
   background: var(--text-light);
   padding: 2rem;
@@ -116,6 +119,9 @@ label abbr {
   color: var(--text-dark);
 }
 
+/* ---------------------------
+   Stars Rating
+---------------------------- */
 .stars {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -146,19 +152,40 @@ label abbr {
   background: gold;
 }
 
-main p:first-of-type {
+/* ---------------------------
+   Review Page Message
+---------------------------- */
+.review-message {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  padding: 2rem 1rem;
 }
 
-main p:nth-of-type(2) {
-  text-align: center;
-  font-size: 1.2rem;
+#thanks-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+#success-text {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+}
+
+#count-text {
+  font-size: 1.1rem;
   color: #444;
 }
 
+/* ---------------------------
+   Footer
+---------------------------- */
 footer {
   background: var(--primary-dark);
   color: var(--text-light);
@@ -177,18 +204,23 @@ footer span {
   font-weight: bold;
 }
 
-/* Responsive Design */
-
+/* ---------------------------
+   Responsive Design
+---------------------------- */
 @media (max-width: 600px) {
   .review-form {
     padding: 1.5rem;
   }
 
-  main p:first-of-type {
-    font-size: 1.5rem;
+  #thanks-text {
+    font-size: 1.8rem;
   }
 
-  main p:nth-of-type(2) {
+  #success-text {
+    font-size: 1.1rem;
+  }
+
+  #count-text {
     font-size: 1rem;
   }
 }
