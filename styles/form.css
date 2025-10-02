@@ -119,9 +119,6 @@ label abbr {
   color: var(--text-dark);
 }
 
-/* ---------------------------
-   Stars Rating
----------------------------- */
 .stars {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -152,9 +149,6 @@ label abbr {
   background: gold;
 }
 
-/* ---------------------------
-   Review Page Message
----------------------------- */
 .review-message {
   flex: 1;
   display: flex;
@@ -183,9 +177,6 @@ label abbr {
   color: #444;
 }
 
-/* ---------------------------
-   Footer
----------------------------- */
 footer {
   background: var(--primary-dark);
   color: var(--text-light);
